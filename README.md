@@ -8,3 +8,5 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+npm install fraction.js
