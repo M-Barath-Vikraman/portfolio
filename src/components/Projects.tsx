@@ -91,45 +91,45 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Gaming Portfolio",
-      description: "Interactive gaming portfolio with 3D elements and immersive animations",
+      title: "Comfort Keys",
+      description: "Created an ecosystem that enables property owners to list rentals easily, with features like booking, wishlists, and property management for both hosts and tourists.",
   image: "/images/project-1.png",
-      tech: ["React", "Three.js", "GSAP"],
+      tech: ["React", "Redux", "MongoDB Atlas", "SCSS", "JSX"],
       color: "primary"
     },
     {
-      title: "Animation Tools Platform",
-      description: "Educational platform for learning web animation techniques",
+      title: "Global Satellite & Rocket Launch Analysis",
+      description: "Developed a Power BI dashboard to analyze satellite and rocket launches by all countries, showcasing trends and insights. Visualized launch frequencies and country-wise contributions using interactive charts and graphs.",
   image: "/images/project-2.png",
-      tech: ["Next.js", "TypeScript", "Framer Motion"],
+      tech: ["Power BI"],
       color: "secondary"
     },
     {
-      title: "Developer Portfolio",
-      description: "Modern portfolio showcasing creative development skills",
+      title: "Automobile price prediction",
+      description: "Developed a machine learning model to predict automobile prices based on various features.",
   image: "/images/project-3.png",
-      tech: ["React", "GSAP", "Tailwind"],
+      tech: ["Python", "Streamlit", "Pandas", "HTML" , "CSS","Selenium","scikit-learn"],
       color: "accent"
     },
     {
-      title: "AuthKit Dashboard",
-      description: "Authentication solution with clean, modern interface",
+      title: "PetPal Shop-Online Pet Accessories",
+      description: " Created an e-commerce platform for pet accessories, offering products like toys, food, and shampoos for a smooth shopping experience.Integrated a reliable database for inventory management and order tracking, improving transaction accuracy and user satisfaction.",
   image: "/images/project-4.png",
-      tech: ["Vue.js", "Node.js", "MongoDB"],
+      tech: ["HTML", "CSS", "Bootstrap","Java Script"],
       color: "primary"
     },
     {
-      title: "3D Web Experience",
-      description: "Interactive 3D web application with immersive user experience",
-  image: "/images/project-5.png",
-      tech: ["React", "Three.js", "WebGL"],
+      title: "QUIZ-ARENA-Online MCQ examination",
+      description: "Developed an online platform for conducting MCQ examinations with real-time analytics and user management.",
+  image: "/images/project-5.jpg",
+      tech: ["Java Swing", "Mongo DB", "Java"],
       color: "secondary"
     },
     {
-      title: "Gaming UI System",
-      description: "Next-level gaming interface with advanced interactions",
+      title: " FryZone (Restaurant Dashboard)",
+      description: " Deployed a React-based restaurant dashboard (FryZone) using AWS ECS and ECR, with Terraform for infrastructure as code and Docker for containerization. Built the frontend using React.js, Vite, and Tailwind CSS, ensuring a responsive UI and seamless cloud-native deployment.",
   image: "/images/project-6.png",
-      tech: ["React", "Electron", "WebGL"],
+      tech: ["AWS ECS", "ECR", "Terraform", "Docker", "React.js", "Vite", "Tailwind"],
       color: "accent"
     }
   ];
