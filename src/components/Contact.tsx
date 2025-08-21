@@ -123,8 +123,13 @@ export const Contact = () => {
     ease: 'power2.inOut',
     onComplete: async () => {
       try {
+        // Determine API URL based on environment
+        const apiUrl = import.meta.env.DEV 
+          ? "http://localhost:3001/api/contact"  // Local development server
+          : "/api/contact";                      // Production (Vercel)
+        
         // Call backend API
-        const response = await fetch("/api/contact", {
+        const response = await fetch(apiUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
