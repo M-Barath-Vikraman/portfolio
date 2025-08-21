@@ -109,34 +109,64 @@ export const Contact = () => {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Submit button animation
-    const submitBtn = document.querySelector('.submit-btn');
-    gsap.to(submitBtn, {
-      scale: 0.95,
-      duration: 0.1,
-      yoyo: true,
-      repeat: 1,
-      ease: 'power2.inOut',
-      onComplete: () => {
-        // Here you would handle the actual form submission
-        console.log('Form submitted:', formData);
-        
-        // Reset form
-        setFormData({ name: '', email: '', message: '' });
-        
-        // Success animation (you could show a toast here)
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const submitBtn = document.querySelector('.submit-btn');
+
+  // Animate button click
+  gsap.to(submitBtn, {
+    scale: 0.95,
+    duration: 0.1,
+    yoyo: true,
+    repeat: 1,
+    ease: 'power2.inOut',
+    onComplete: async () => {
+      try {
+        // Call backend API
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          // Reset form
+          setFormData({ name: "", email: "", message: "" });
+
+          // Success animation (green flash)
+          gsap.to(submitBtn, {
+            backgroundColor: "#10B981", // emerald-500
+            duration: 0.3,
+            yoyo: true,
+            repeat: 1,
+          });
+        } else {
+          // Error animation (red flash)
+          gsap.to(submitBtn, {
+            backgroundColor: "#EF4444", // red-500
+            duration: 0.3,
+            yoyo: true,
+            repeat: 1,
+          });
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+
+        // Error animation (red flash)
         gsap.to(submitBtn, {
-          backgroundColor: '#10B981',
+          backgroundColor: "#EF4444", // red-500
           duration: 0.3,
           yoyo: true,
-          repeat: 1
+          repeat: 1,
         });
       }
-    });
-  };
+    }
+  });
+};
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
