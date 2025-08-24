@@ -118,12 +118,12 @@ export const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
+          {/* <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Copyright size={16} />
             <span>2024 Barath Vikraman. Made with</span>
             <Heart size={16} className="text-red-500 animate-pulse" />
             <span>and lots of coffee.</span>
-          </div>
+          </div> */}
 
           {/* Back to Top */}
           <button
