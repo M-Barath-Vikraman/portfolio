@@ -60,7 +60,16 @@ export const Navigation = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+    
+    if (isOpen) {
+      // Close mobile menu with animation
+      gsap.to('.mobile-menu', {
+        x: '100%',
+        duration: 0.4,
+        ease: 'power3.inOut'
+      });
+      setIsOpen(false);
+    }
   };
 
   return (
